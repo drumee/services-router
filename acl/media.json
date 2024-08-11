@@ -1,0 +1,598 @@
+{
+  "services": {
+    "attributes": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      },
+      "method": "get_node_attr"
+    },
+    "audio": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "best": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      },
+      "method": "webp"
+    },
+    "broadcast": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "browse": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      },
+      "method": "show_node_by"
+    },
+    "browse_by": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      },
+      "method": "show_node_by"
+    },
+    "card": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "check_media_child_exist": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "list_server_files": {
+      "scope": "domain",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "create_server_dir": {
+      "scope": "domain",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "check_media_root_exist": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "clear_notifications": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "comment": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "copy": {
+      "scope": "hub",
+      "permission": {
+        "src": "read",
+        "dest": "write",
+        "preproc": {
+          "checker": "pre_transact",
+          "action": "copy"
+        }
+      },
+      "method": "copy_all"
+    },
+    "copy_all": {
+      "scope": "hub",
+      "permission": {
+        "src": "read",
+        "dest": "write",
+        "preproc": {
+          "checker": "pre_transact",
+          "action": "copy"
+        }
+      }
+    },
+    "toPdf": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "download": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "empty_bin": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "folder": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "get_all": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "get_by_type": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "get_filenames": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "get_lock": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "get_node_attr": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "get_node_info": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "get_node_stat": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "get_path": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "get_root_conflict": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "home": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "info": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "is_expired": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous",
+        "fast_check": "user_permission"
+      }
+    },
+    "lock": {
+      "scope": "hub",
+      "permission": {
+        "src": "owner"
+      }
+    },
+    "link": {
+      "scope": "hub",
+      "permission": {
+        "src": "write",
+        "dest": "admin"
+      }
+    },
+    "make_dir": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "make_dir_special": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "manifest": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "mark_as_seen": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "move": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete",
+        "dest": "delete",
+        "preproc": {
+          "checker": "pre_transact",
+          "action": "move"
+        }
+      },
+      "method": "move_all"
+    },
+    "move_all": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete",
+        "dest": "write",
+        "preproc": {
+          "checker": "pre_transact",
+          "action": "move"
+        }
+      }
+    },
+    "node_info": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      },
+      "method": "get_node_attr"
+    },
+    "ogv": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "orig": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "preview": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "page": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "pdf": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "purge": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "raw": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "read": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      },
+      "method": "pdf"
+    },
+    "remove_comment": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "rename": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "reorder": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "replace": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete",
+        "preproc": {
+          "checker": "pre_upload"
+        }
+      }
+    },
+    "restore_into": {
+      "scope": "hub",
+      "permission": {
+        "src": "read",
+        "dest": "write",
+        "preproc": {
+          "checker": "pre_restore_into",
+          "action": "move"
+        }
+      }
+    },
+    "rotate": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "save": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "search": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      },
+      "method": "media_search"
+    },
+    "set_homepage": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "share": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "sharebox_home": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "show_bin": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "show_folders": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "show_new": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "show_node_by": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "show_node_by_with_size": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "show_slides": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "slide": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "slurp": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "style": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      },
+      "method": "stylesheet"
+    },
+    "stylesheet": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "thumb": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "relocate": {
+      "scope": "hub",
+      "permission": {
+        "src": "read",
+        "dest": "write",
+        "method": "move_all",
+        "preproc": {
+          "checker": "pre_transact",
+          "action": "move"
+        }
+      }
+    },
+    "trash": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete",
+        "preproc": {
+          "checker": "pre_trash"
+        }
+      }
+    },
+    "update_caption": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "update_status": {
+      "scope": "hub",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "upload": {
+      "scope": "hub",
+      "permission": {
+        "src": "write",
+        "preproc": {
+          "checker": "pre_upload"
+        }
+      }
+    },
+    "upload_base64": {
+      "scope": "hub",
+      "permission": {
+        "src": "write",
+        "preproc": {
+          "checker": "pre_upload"
+        }
+      }
+    },
+    "video": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "view": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "vignette": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "webp": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "xl": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous",
+        "fast_check": "public-api"
+      }
+    },
+    "zip": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "zip_cancel": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "zip_release": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "zip_size": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "dmz_copy": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "dmz_detail": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "server_export": {
+      "scope": "domain",
+      "permission": {
+        "src": "delete"
+      }
+    },
+    "server_import": {
+      "scope": "domain",
+      "permission": {
+        "src": "delete"
+      }
+    }
+  },
+  "modules": {
+    "public": "service/media",
+    "private": "service/private/media"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "services": {
+    "insert_row": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "create_table": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "delete_table": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    },
+    "fetch": {
+      "scope": "hub",
+      "permission": {
+        "src": "read"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/private/table"
+  }
+}
