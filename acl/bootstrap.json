@@ -1,0 +1,36 @@
+{
+  "services": {
+    "js": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous",
+        "fast_check": "public-api"
+      }
+    },
+    "dom": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous",
+        "fast_check": "public-api"
+      }
+    },
+    "publicKey": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous",
+        "fast_check": "public-api"
+      }
+    },
+    "authn": {
+      "scope": "hub",
+      "permission": {
+        "src": "anyone",
+        "fast_check": "public-api"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/bootstrap",
+    "public": "service/bootstrap"
+  }
+}

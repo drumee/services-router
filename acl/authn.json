@@ -1,0 +1,15 @@
+{
+  "services": {
+    "create": {
+      "scope": "hub",
+      "permission": {
+        "src": "anyone",
+        "fast_check": "public-api"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/authn",
+    "public": "service/authn"
+  }
+}

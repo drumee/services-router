@@ -1,0 +1,23 @@
+{
+  "name": "drumee-server",
+  "version": "1.0.0",
+  "description": "Drumee Infrastructure",
+  "main": "index.js",
+  "scripts": {
+    "test:db": "node test/db.js",
+    "test:acl": "node test/acl.js",
+    "test:redis": "node test/redis.js",
+    "test:cache": "node test/cache.js",
+    "test:modules": "node test/modules.js",
+    "dev": "drumee-server-devel",
+    "deploy": "drumee-server-deploy"
+  },
+  "dependencies": {
+    "@drumee/server-essentials": "^1.0.5",
+    "redis": "^4.7.0",
+    "websocket": "^1.0.35"
+  },
+  "devDependencies": {
+    "@drumee/server-dev-tools": "^1.1.5"
+  }
+}
