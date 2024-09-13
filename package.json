@@ -1,14 +1,10 @@
 {
-  "name": "drumee-server",
+  "name": "@drumee/services-router",
   "version": "1.0.0",
-  "description": "Drumee Infrastructure",
+  "description": "Drumee Services Router",
   "main": "index.js",
   "scripts": {
-    "test:db": "node test/db.js",
-    "test:acl": "node test/acl.js",
-    "test:redis": "node test/redis.js",
-    "test:cache": "node test/cache.js",
-    "test:modules": "node test/modules.js",
+    "postinstall": "npm init",
     "dev": "drumee-server-devel",
     "deploy": "drumee-server-deploy"
   },
