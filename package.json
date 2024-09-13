@@ -4,7 +4,6 @@
   "description": "Drumee Services Router",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm init",
     "dev": "drumee-server-devel",
     "deploy": "drumee-server-deploy"
   },
