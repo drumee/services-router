@@ -16,7 +16,7 @@ const { Entity, FileIo } = require("@drumee/server-core");
 const { existsSync, readFileSync } = require("fs");
 const { isEmpty, isString, isArray } = require("lodash");
 
-const { getPlugins } = require("../router/rest");
+const { getPlugins } = require("../router/service");
 const {resolve} = require("path");
 const { credential_dir } = sysEnv();
 let file = resolve(credential_dir, `crypto/public.pem`);

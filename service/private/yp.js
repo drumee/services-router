@@ -11,15 +11,6 @@ class private_yp extends yp {
   constructor(...args) {
     super(...args);
     this.special_access = this.special_access.bind(this);
-    this.list_locale = this.list_locale.bind(this);
-    this.update_locale = this.update_locale.bind(this);
-    this.add_locale = this.add_locale.bind(this);
-    this.get_locale = this.get_locale.bind(this);
-    this.delete_locale = this.delete_locale.bind(this);
-    this.lookup_drumates = this.lookup_drumates.bind(this);
-    this.ident_exists = this.ident_exists.bind(this);
-    this.email_exists = this.email_exists.bind(this);
-    this.check_password = this.check_password.bind(this);
   }
 
   /**

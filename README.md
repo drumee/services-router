@@ -22,4 +22,9 @@ npm install
 
 After installation edit the file .dev-tools.rc/devel.sh to make your changes available from the backend server. 
 
+Start working on your project.
+```console
+npm run dev
+```
+
 Learn more about Drumee Routing Rules at https://github.com/drumee/sdk/wiki
