@@ -1,10 +1,25 @@
 # Drumee Services ROuter
-This package provide Drumee Services Router. It is designed to be the basement of new projects based on Drumee SDK.
+This package provide Drumee Services Router. It is designed to bootstrap new project based on Drumee SDK.
 
 ```console
-npm i @drumee/services-router
+mkdir drumee
+cd drumee
+git clone --depth=1 https://github.com/drumee/services-router.git server 
+cd server 
+rm -rf .git
 ```
 
-At the prompt, give the name to your project. After installation edit the file .dev-tools.rc/devel.sh to make your changes available from the backend server. 
+Setup your own project project with
+
+```console
+npm init
+```
+
+Install dependencies packages.
+```console
+npm install
+```
+
+After installation edit the file .dev-tools.rc/devel.sh to make your changes available from the backend server. 
 
 Learn more about Drumee Routing Rules at https://github.com/drumee/sdk/wiki

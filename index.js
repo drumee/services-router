@@ -2,7 +2,7 @@ const { DrumeeCache, Events } = require("@drumee/server-essentials");
 const { END, ERROR, ROUTER_READY, START } = Events;
 const HttpServer = require("http");
 const { server: SocketServer } = require("websocket");
-const Page = require("./client/page");
+const Page = require("./page");
 
 const configs = require("./configs");
 const env = configs.env();
