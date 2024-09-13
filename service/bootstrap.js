@@ -3,7 +3,7 @@ const { resolve } = require('path');
 const keyFile = '/etc/drumee/credential/crypto/public.pem';
 const { RuntimeEnv } = require('@drumee/server-core');
 const { uniqueId, sysEnv, Attr } = require("@drumee/server-essentials");
-const TPL_BASE = "client/templates";
+const TPL_BASE = "page/templates";
 
 class __bootstrap extends RuntimeEnv {
 

@@ -10,7 +10,7 @@ const { READ } = Permission;
 const {
   main_domain, ui_location, endpoint, server_location
 } = sysEnv();
-const TPL_BASE = "client/templates";
+const TPL_BASE = "page/templates";
 
 class MainPage extends RuntimeEnv {
   /**
