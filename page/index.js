@@ -10,11 +10,15 @@ const { READ } = Permission;
 const {
   main_domain, ui_location, endpoint, server_location
 } = sysEnv();
-const TPL_BASE = "client/templates";
+const TPL_BASE = "page/templates";
 
 class MainPage extends RuntimeEnv {
+  constructor(...args) {
+    super(...args);
+    this.start = this.start.bind(this);
+  }
   /**
-   * Propert isServingPage tells to Acl to grant access, since we
+   * Property isServingPage tells to Acl to grant access, since we
    * are serving only frontend code.
    * In case there a homepage defined, Acl shall be done locally
    * @param {*} opt 

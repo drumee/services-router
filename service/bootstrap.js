@@ -3,7 +3,7 @@ const { resolve } = require('path');
 const keyFile = '/etc/drumee/credential/crypto/public.pem';
 const { RuntimeEnv } = require('@drumee/server-core');
 const { uniqueId, sysEnv, Attr } = require("@drumee/server-essentials");
-const TPL_BASE = "client/templates";
+const TPL_BASE = "page/templates";
 
 class __bootstrap extends RuntimeEnv {
 
@@ -33,7 +33,6 @@ class __bootstrap extends RuntimeEnv {
     data = { ...this.hub.toJSON(), ...data, type };
     let auth = this.input.authorization();
     data.host = this.input.host();
-    this.debug("AAA:47", {data})
 
     data.keysel = auth.keysel || Attr.regsid;
     this.set({ data });
@@ -41,7 +40,6 @@ class __bootstrap extends RuntimeEnv {
     const { server_location } = sysEnv();
     let template_dir = resolve(server_location, TPL_BASE);
     let content = this.getRender(template_dir, "bootstrap.dom.tpl")(data);
-    this.debug("AAA:47", {template_dir})
     this.output.javascript(content);
   }
 
