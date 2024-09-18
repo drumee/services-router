@@ -1,3 +1,4 @@
+
 const {
   Attr, Constants, Cache, toArray, RedisStore, sysEnv
 } = require("@drumee/server-essentials");
@@ -11,7 +12,7 @@ const { Entity, FileIo } = require("@drumee/server-core");
 const { existsSync, readFileSync } = require("fs");
 const { isEmpty, isString, isArray } = require("lodash");
 
-const { getPlugins } = require("../router/rest");
+const { getPlugins } = require("../router/service");
 const {resolve} = require("path");
 const { credential_dir } = sysEnv();
 let file = resolve(credential_dir, `crypto/public.pem`);
@@ -108,6 +109,7 @@ class __yp extends Entity {
     //   signature: await this.yp.await_func("sys_conf_get", "licence_signature"),
     //   content: await this.yp.await_func("sys_conf_get", "licence_content"),
     // };
+
     if (
       global.myDrumee.isPublic &&
       global.myDrumee.useEmail &&
@@ -236,61 +238,7 @@ class __yp extends Entity {
     await this.session.login(this.input.use("vars"), this.input.use("resent"));
   }
 
-  /**
-   *
-   */
-  async guest_login() {
-    let token = this.input.need(Attr.token);
 
-    let res = await this.session.dmz_login(token, this.input.get(Attr.password));
-
-    if (res.failed) {
-      //res.status = res.error;
-      res.validity = res.error;
-    }
-    let info = await this.yp.await_proc("dmz_info_next", token);
-
-    let rows = await this.yp.await_proc(
-      "forward_proc",
-      info.hub_id,
-      "dmz_settings",
-      ``
-    );
-    info.hours = rows[0].hours;
-    info.days = rows[0].days;
-    if (info.is_public && !res.guest_name) {
-      res.require_name = 1;
-    }
-    if (res.is_verified) info.require_password = 0;
-    if (info.require_password) {
-      info.validity = "REQUIRED_PASSWORD";
-    }
-
-    let metadata = {};
-
-    if (!res.failed) {
-      let r = await this.db.await_proc("mfs_access_node", "*", res.id);
-      metadata = this.parseJSON(r.metadata);
-
-      if (!isEmpty(metadata)) {
-        metadata.branch = this.parseJSON(metadata.branch);
-        if (!isArray(metadata.branch)) {
-          metadata.branch = [metadata.branch];
-        }
-        if (!isEmpty(metadata.session)) {
-          delete metadata["session"];
-        }
-
-        if (!isEmpty(metadata.fingerprint)) {
-          delete metadata["fingerprint"];
-        }
-        res = {};
-        info = {};
-        res = metadata;
-      }
-    }
-    this.output.data({ ...res, ...info });
-  }
 
   /**
    *
@@ -312,12 +260,7 @@ class __yp extends Entity {
     this.output.data(user);
   }
 
-  /**
-   *
-   */
-  guest_logout() {
-    this.session.dmz_logout();
-  }
+
 
   /**
    *
@@ -332,31 +275,7 @@ class __yp extends Entity {
     this.output.data({ sid, uid: this.uid });
   }
 
-  /**
-   *
-   */
-  get_external_share() {
-    const share_id = this.input.need(Attr.share_id);
-    this.yp.call_proc("get_external_share", share_id, this.output.data);
-  }
 
-  /**
-   *
-   */
-  notification_count() {
-    this.yp.call_proc("yp_notification_count", this.uid, this.output.data);
-  }
-
-  /**
-   * 
-   */
-  notification_list() {
-    this.yp.call_proc(
-      "yp_notification_receive_list",
-      this.uid,
-      this.output.data
-    );
-  }
 
   /**
    * 
@@ -493,19 +412,13 @@ class __yp extends Entity {
   async ping() {
     let data = this.input.get("data");
     if (!data || !data.socket_id) {
-      this.output.data({ verbosity: global.verbosity, modules: global.debug });
+      this.output.data({ verbosity: global.verbosity, debug: global.debug });
       return;
     }
     redisStore.sendData(data);
     this.output.data({ verbosity: global.verbosity, modules: global.debug });
   }
 
-  /**
-   *
-   */
-  clear_share() {
-    this.output.output({});
-  }
 }
 
 module.exports = __yp;

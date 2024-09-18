@@ -1,15 +1,6 @@
-// ================================  *
-//   Copyright Xialia.com  2013-2017 *
-//   FILE  : src/service/yp
-//   TYPE  : module
-// ================================  *
-
-
 
 const { Entity } = require('@drumee/server-core');
 const { uniqueId } = require("@drumee/server-essentials");
-
-//########################################
 class __authn extends Entity {
 
   /**

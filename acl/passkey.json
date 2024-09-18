@@ -1,0 +1,36 @@
+{
+  "services": {
+    "getRegnOptions": {
+      "scope": "hub",
+      "permission": {
+        "src": "anyone",
+        "fast_check": "public-api"
+      }
+    },
+    "register": {
+      "scope": "hub",
+      "permission": {
+        "src": "anyone",
+        "fast_check": "public-api"
+      }
+    },
+    "getAuthnOptions": {
+      "scope": "hub",
+      "permission": {
+        "src": "anyone",
+        "fast_check": "public-api"
+      }
+    },
+    "authenticate": {
+      "scope": "hub",
+      "permission": {
+        "src": "anyone",
+        "fast_check": "public-api"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/authn",
+    "public": "service/authn"
+  }
+}

@@ -1,24 +1,21 @@
-// ================================  *
-//   Copyright Xialia.com  2013-2020 *
-//   Add by Somanos 12345!
-// ================================  *
 
 const { DrumeeCache, Events } = require("@drumee/server-essentials");
 const { END, ERROR, ROUTER_READY, START } = Events;
 const HttpServer = require("http");
-const SocketServer = require("websocket").server;
-const Page = require("./client/page");
+const { server: SocketServer } = require("websocket");
+const Page = require("./page");
 
 const configs = require("./configs");
 const env = configs.env();
 configs.load();
 
 const { Session, Input, Output } = require("@drumee/server-core");
-const { Router } = require("./router/push")(env);
+const { Router } = require("./router/websocket")(env);
 
 let timeout = null;
 let timer = 1000;
 let SEQ = 0;
+
 
 Page.hash();
 

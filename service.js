@@ -10,15 +10,14 @@ const configs = require("./configs");
 const env = configs.env();
 configs.load();
 const HttpServer = require("http");
-const Acl = require("./router/rest");
 
+const Acl = require("./router/service");
 console.log(`Starting service server with verbosity = ${global.verbosity}`);
-// console.log(require("@drumee/server-core").Info);
-// console.log(require("@drumee/server-essentials").Info);
-
-// ========================================
-//
-// ========================================
+/**
+ * Service handler
+ * @param {*} request 
+ * @param {*} response 
+ */
 const handler = function (request, response) {
   const input = new Input({ request, sourceName: "service" });
   const output = new Output({ response });
@@ -74,7 +73,7 @@ res
     await Cache.load();
 
     console.log("Cache loaded", Cache.message("_domain_name"));
-    await Acl.loadModules();
+    await Acl.loadModules("./acl");
     await Acl.loadPlugins();
     const http = HttpServer.createServer((request, response) => {
       try {
