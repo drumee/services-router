@@ -1,0 +1,26 @@
+{
+  "services": {
+    "verbosity": {
+      "scope": "plateform",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "instances": {
+      "scope": "domain",
+      "permission": {
+        "src": "read"
+      }
+    },
+    "log_over_socket": {
+      "scope": "plateform",
+      "permission": {
+        "src": "read"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/private/devel",
+    "public": "service/private/devel"
+  }
+}

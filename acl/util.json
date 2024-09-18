@@ -1,0 +1,31 @@
+{
+  "services": {
+    "get_cities": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "get_countries": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "search_cities": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "search_countries": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    }
+  },
+  "modules": {
+    "public": "service/util"
+  }
+}

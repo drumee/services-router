@@ -1,0 +1,14 @@
+{
+  "services": {
+    "updateLicence": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/input",
+    "public": "service/input"
+  }
+}

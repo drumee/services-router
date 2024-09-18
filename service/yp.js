@@ -1,8 +1,4 @@
-// ================================  *
-//   Copyright Xialia.com  2013-2017 *
-//   FILE  : src/service/yp
-//   TYPE  : module
-// ================================  *
+
 const {
   Attr, Constants, Cache, toArray, RedisStore, sysEnv
 } = require("@drumee/server-essentials");
@@ -109,10 +105,11 @@ class __yp extends Entity {
     data.platform.arch = global.myDrumee.arch || "pod";
     data.platform.cdnHost = global.myDrumee.cdnHost;
     data.platform.version = global.VERSION;
-    data.platform.licence = {
-      signature: await this.yp.await_func("sys_conf_get", "licence_signature"),
-      content: await this.yp.await_func("sys_conf_get", "licence_content"),
-    };
+    // data.platform.licence = {
+    //   signature: await this.yp.await_func("sys_conf_get", "licence_signature"),
+    //   content: await this.yp.await_func("sys_conf_get", "licence_content"),
+    // };
+
     if (
       global.myDrumee.isPublic &&
       global.myDrumee.useEmail &&
@@ -242,6 +239,7 @@ class __yp extends Entity {
   }
 
 
+
   /**
    *
    */
@@ -263,6 +261,7 @@ class __yp extends Entity {
   }
 
 
+
   /**
    *
    */
@@ -275,7 +274,6 @@ class __yp extends Entity {
     await this.yp.await_proc("session_reset", sid, this.uid, socket_id);
     this.output.data({ sid, uid: this.uid });
   }
-
 
 
 

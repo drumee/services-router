@@ -10,10 +10,9 @@ const configs = require("./configs");
 const env = configs.env();
 configs.load();
 const HttpServer = require("http");
+
 const Acl = require("./router/service");
-
 console.log(`Starting service server with verbosity = ${global.verbosity}`);
-
 /**
  * Service handler
  * @param {*} request 

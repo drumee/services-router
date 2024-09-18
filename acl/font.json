@@ -1,0 +1,29 @@
+{
+  "services": {
+    "font_list": {
+      "scope": "hub",
+      "permission": {
+        "src": "owner"
+      },
+      "method": "font_list"
+    },
+    "search": {
+      "scope": "hub",
+      "permission": {
+        "src": "owner"
+      },
+      "method": "font_search"
+    },
+    "files": {
+      "scope": "hub",
+      "permission": {
+        "src": "owner"
+      },
+      "method": "get_files"
+    }
+  },
+  "modules": {
+    "private": "service/font",
+    "public": "service/font"
+  }
+}

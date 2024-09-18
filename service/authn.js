@@ -1,3 +1,4 @@
+
 const { Entity } = require('@drumee/server-core');
 const { uniqueId } = require("@drumee/server-essentials");
 class __authn extends Entity {

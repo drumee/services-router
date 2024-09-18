@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    /*background-color: #B6BFCA;*/
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+.unsupported-main{
+    display:block;
+    max-width: 800px;
+    min-height:465px;
+    border-radius:4px;
+    background-color:white;
+    flex-flow: column;
+    margin:0 auto;
+    padding:50px;
+    box-shadow: 0 0 31px 0 rgba(0,0,0,.2);
+}
+.unsupported-logo-container{
+    display:block;
+}
+
+.unsupported-title{
+    height: 30px;
+    color: #FA8540;
+    font-family: Roboto, Calibri;
+    font-weight: 400;
+    font-size: 24px;
+    line-height:30px;
+    text-align: center;
+    margin:10px auto 65px auto;
+}
+.supported-browser{
+    width: 100%;
+    color: #787B7F;
+    font-family: Roboto, Calibri;
+    font-size: 18px;
+    line-height: 24px;
+    text-align:left;
+    word-break: break-word;
+    padding-left:15px;
+    padding-bottom: 15px;
+}
+.name{
+    display:inline-block;
+    width: 130px;
+}
+.version{
+    padding-left:16px;
+    padding-right:35px;
+    display:inline-block;
+    width: 45px;
+    text-align: center;
+}
+.unsupported_link{
+    color:#4A90E2;
+    display:inline-block;
+    cursor: pointer;
+}
+.unsupported-signature{
+    width:331px;
+    color: #787B7F;
+    font-family: Roboto, Calibri;
+    font-size: 18px;
+    font-weight:500;
+    line-height: 24px;
+    text-align:left;
+    word-break: break-word;
+    margin-top:55px;
+    margin-left:16px;
+}
+
+
+
+
+
+.unsupported-cont_logo{
+    height:75px;
+}
+
+.unsupported-logo{
+    width:140px;
+    /*height:105px;*/
+    padding-top:26px !important;
+    border:0;
+    /*margin:26px auto 0px auto;*/
+    display:block;
+    outline:none;
+    margin:auto auto 0px auto;
+}
+
+.unsupported-logo img{
+   /* width: 100%;
+    height: 100%;*/
+    height:35px;
+    width:140px;
+}
+
+.unsupported-logo-text{
+    height: 12px;
+    width: 131px;
+    color:#ffffff;
+    font-family: "Roboto";
+    font-size: 11px;
+    line-height: 12px;
+    text-align: center;
+   /* margin-left: 205px;  */
+    margin:auto;
+}
+
+.unsupported-message-container{
+    min-height: 480px;
+    width:450px;
+    background-color: #ffffff;
+    border-radius:4px;
+    /*padding:1px; /*20px ; 26px;*/
+    margin:0 auto;
+    box-shadow: 0 5px 7px 1px rgba(63,79,117,.13), 0 5px 14px 0 rgba(86,65,113,.08), 0 2px 13px 0 rgba(194,185,203,0) !important;
+}
+
+.unsupported-email-container{
+    width: 100%;
+    text-align: center;
+    word-break: break-word;
+    display: flex;
+}
+
+.unsupported-email{
+    /*margin:0 auto;*/
+    color:white;
+    background-color: #B6BFCA; /*#c3cde6;/*#FA8540; / #879BFF;*/
+    padding: 8px;
+    line-height: 30px;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight:500;
+    border-radius:2px;
+    margin:40px auto 30px auto;
+}
+
+.unsupported-text{
+    height: 40px; 
+    color: #000000;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 22px;
+    /* font-weight: 550; */
+    text-align: left;
+    word-break: break-word;
+    margin-top: 15px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+.unsupported-message-me-container{
+    /*height: 108px; */
+    width: 331px;
+    background-color: #F7F7F7;
+    border-radius: 2px;
+    /* margin-top: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 10px;
+   /* padding: 1px 10px 15px 10px; avec signature autmatique*/
+    cursor: text;
+}
+.drumee_message{
+    color: #4A90E2;
+    font-weight: 300;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+}
+.unsupported-message-me{
+    color: #787B7F;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 20px;
+    /* font-weight: 500; */
+    text-align: left;
+    word-break: break-word;
+}
+
+.unsupported-signature-me{
+    color: #787B7F;
+    font-family: "Roboto";
+    font-size: 14px;
+    /*line-height: 20px;
+    /* font-weight: 500; */
+    text-align: left;
+    word-break: break-word;
+    /*margin-bottom:5px;*/
+}
+.unsupported-link-container-text{
+    width:202px; /*331px;*/
+    /*height:34px;*/
+    background-color: #879BFF;
+    border-radius:2px;
+    line-height:45px;
+    padding: 6px; /*10px;*/
+    margin-top: 30px; /*40px;*/
+    margin-bottom:80px; /*70px;*/
+    margin-right: auto;
+    margin-left: auto;/*59px;*/
+    cursor:pointer;
+    text-align: center;
+    /*margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 120px;*/
+}
+
+.unsupported-cont_end-text{
+    width:100%;
+    /*height:170px;
+    margin-bottom:25px;*/
+}
+.unsupported-privacy{
+    /* height:65px;*/
+    color: #787B7F;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 18px;
+    text-align:left;
+    font-weight:350;
+    word-break: break-word;
+    /*margin-top:40px;*/
+    margin-left:45px;
+    margin-right:45px;
+}
+.unsupported-privacy-container{
+    /*font-size:0px;*/
+    padding:0px;
+    padding-bottom:30px; /*19px;*/
+    word-break:break-word;
+    display: block;
+}
+.unsupported-privacy p{
+    margin: 0;
+}
+.unsupported-privacy strong{
+    font-weight: bold;
+}
+.unsupported-see-more{
+    /*height:20px;*/
+    color: #4A90E2;
+    font-weight:350;
+    font-family: Roboto;
+    font-size: 12px;/*14px;*/
+    line-height: 10px;
+    text-align:left;
+    word-break: break-word;
+    /*margin-top:7px;*/
+    margin-left:7px;
+    cursor:pointer;
+    /*padding:5px;
+    margin-top:15px;*/
+}
+
+.pres-nomessage{
+    margin-top:0px;
+}
+
+.unsupported-column-footer{
+    display:block;
+}
+.unsupported-row-footer{
+    display:block;
+
+}
+.unsupported-cont-footer_text.link{
+    margin:auto auto;
+    height: 50px;
+    background-color: transparent;
+    border:none;
+    /*width:540px;*/
+}
+/*.unsupported-link{
+    height: 100%;
+    width: 100%;    
+    font-size: 16px;
+    font-weight: 300;
+    line-height:20px; /*21px;
+    font-family:"Roboto";
+    color:#ffffff;
+    text-align: center;
+    cursor:pointer;
+    margin-top:15px;
+    /*padding-bottom: 16px;*/
+    /*min-height: 60px;
+    display: inline-block;
+}*/
+
+
+
+
+
+
+

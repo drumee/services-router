@@ -1,7 +1,9 @@
+
 const { Attr, Events } = require("@drumee/server-essentials");
 const { DENIED } = Events;
 
 const yp = require("../yp");
+
 
 class private_yp extends yp {
   /**
@@ -30,6 +32,7 @@ class private_yp extends yp {
   /**
    * 
    */
+
   check_password() {
     const pw = this.input.use(Attr.password);
     this.yp.call_proc("check_password_next", this.uid, pw, this.output.data);

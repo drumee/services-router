@@ -1,0 +1,63 @@
+{
+  "services": {
+    "add": {
+      "scope": "plateform",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "build": {
+      "scope": "plateform",
+      "permission": {
+        "src": "modify"
+      }
+    },
+    "delete": {
+      "scope": "plateform",
+      "permission": {
+        "src": "modify"
+      }
+    },
+    "keys": {
+      "scope": "plateform",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "get": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      },
+      "method": "show"
+    },
+    "group": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "list": {
+      "scope": "plateform",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "search": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      }
+    },
+    "update": {
+      "scope": "plateform",
+      "permission": {
+        "src": "modify"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/private/locale",
+    "public": "service/locale"
+  }
+}

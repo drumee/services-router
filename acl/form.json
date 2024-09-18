@@ -1,0 +1,33 @@
+{
+  "services": {
+    "submit": {
+      "scope": "hub",
+      "permission": {
+        "src": "anonymous"
+      },
+      "log": true
+    },
+    "browse": {
+      "scope": "hub",
+      "permission": {
+        "src": "write"
+      }
+    },
+    "update": {
+      "scope": "hub",
+      "permission": {
+        "src": "owner"
+      }
+    },
+    "info": {
+      "scope": "hub",
+      "permission": {
+        "src": "admin"
+      }
+    }
+  },
+  "modules": {
+    "private": "service/private/form",
+    "public": "service/form"
+  }
+}
